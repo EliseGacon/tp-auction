@@ -29,9 +29,9 @@ class Auction :
         self.cli.display(f"Winner is {winner}. Winning bid is {standing_bid}.")
 
     def play(self):
-        opening_bid =self.opening_bid()
+        opening_bid = self.opening_bid()
+        winner, price = auction_loop(opening_bid, bidders)
         bidders = self.init_bidders()
-
-        self.annonce_gagnant(winner, standing_bid)
+        self.annonce_gagnant(winner, price)
 
             
