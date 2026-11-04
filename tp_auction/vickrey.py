@@ -9,6 +9,7 @@ class VickreyAuction(Auction):
 
     def auction_loop(self, opening_bid, bidders):
         bids=[]
+        bids.append((opening_bid, None))
         for bidder in bidders:
             bid = self.cli.prompt(
                 f"Opening bid is {opening_bid}. {bidder} bids:"

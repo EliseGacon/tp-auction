@@ -47,7 +47,10 @@ class EnglishAuction():
                     
         # Display winner
         self.cli.display("\n~~~~~~~~\n")
-        self.cli.display(f"Winner is {winner}. Winning bid is {standing_bid}.")
+        if winner is None : 
+            self.cli.display("No winner for this auction")
+        else:
+            self.cli.display(f"Winner is {winner}. Winning bid is {standing_bid}.")
 
 
 if __name__ == "__main__":

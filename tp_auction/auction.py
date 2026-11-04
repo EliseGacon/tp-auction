@@ -4,6 +4,7 @@ from utils import Cli
 class Auction :
     def __init__(self, cli=None):
         self.cli = cli if cli else Cli()
+        self.auction_type = None
     
     def opening_bid(self):
         self.cli.display(f'Started auction of type: {self.auction_type} ')
