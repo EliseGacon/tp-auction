@@ -4,7 +4,7 @@ from auction import Auction
 
 class VickreyAuction(Auction):
     def __init__(self,cli=None):
-        super().__init__()
+        super().__init__(cli)
         self.auction_type = 'Vickrey'
 
     def auction_loop(self, opening_bid, bidders):
