@@ -20,15 +20,18 @@ class TestBonus(unittest.TestCase):
                     'No winner for this auction',
                     cli.get_displayed()[-1]
                 )
-    def test_vickrey(self):
         
-
-
-
-
-
-
-
+    def test_vickrey(self):
+        cli = make_auction(VickreyAuction) # on crée une Vickrey Auction
+        cli.type('30')      # montant initial
+        cli.type('alice')   # un seul enrichisseur
+        cli.type(None)
+        # Round 1 
+        cli.type(60)  # alice enrichit à 30
+        self.assertEqual(
+                'Winner is alice. Winning bid is 30.',
+                cli.get_displayed()[-1]
+            )
 
 
 
