@@ -83,6 +83,7 @@ class Cat(Animal):
 print (Dog.__mro__)
 # 1) La classe Dog reprend les méthodes de la classe Animal mais on redéfinit sound
 # 2) Il s'affiche (<class '__main__.Dog'>, <class '__main__.Animal'>, <class 'object'>)
+
 try:
     assert Dog("Rex").describe() == "Rex says Woof"
     assert Cat("Tom").describe() == "Tom says Meow"
